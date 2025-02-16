@@ -1,4 +1,4 @@
-package com.test.fc.domain.model;
+package com.test.fc.infrastructure.persistence.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -7,10 +7,10 @@ import lombok.*;
 @Entity
 @Table(name = "brands")
 @Getter
-@Setter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Brand {
+public class BrandEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

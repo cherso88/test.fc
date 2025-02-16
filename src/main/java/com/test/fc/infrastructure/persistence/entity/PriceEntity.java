@@ -1,20 +1,17 @@
-package com.test.fc.domain.model;
+package com.test.fc.infrastructure.persistence.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "prices")
 @Getter
-@Setter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Price {
+public class PriceEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,7 +19,7 @@ public class Price {
 
     @ManyToOne
     @JoinColumn(name = "BRAND_ID", nullable = false)
-    private Brand brand;
+    private BrandEntity brand;
 
     @Column(name = "START_DATE")
     private LocalDateTime startDate;
