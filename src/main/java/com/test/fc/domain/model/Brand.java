@@ -3,7 +3,6 @@ package com.test.fc.domain.model;
 import lombok.*;
 
 @Getter
-@Setter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor

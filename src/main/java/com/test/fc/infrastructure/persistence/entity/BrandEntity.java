@@ -7,9 +7,6 @@ import lombok.*;
 @Entity
 @Table(name = "brands")
 @Getter
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
 public class BrandEntity {
 
     @Id
