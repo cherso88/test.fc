@@ -21,7 +21,7 @@ public class PriceRepositoryImpl implements PriceRepository {
 
     @Override
     public Optional<Price> findApplicablePrice(Long brandId, Long productId, LocalDateTime applicationDate) {
-        return jpaRepository.findApplicablePrice(brandId, productId, applicationDate).map(this::toDomain);
+        return jpaRepository.findFirstApplicablePrice(brandId, productId, applicationDate).map(this::toDomain);
     }
 
     private Price toDomain(PriceEntity entity) {
